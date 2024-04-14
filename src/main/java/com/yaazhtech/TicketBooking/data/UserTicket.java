@@ -1,13 +1,10 @@
 package com.yaazhtech.TicketBooking.data;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Generated;
-import org.springframework.boot.autoconfigure.web.WebProperties;
-
 
 @Entity
 public class UserTicket {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id",nullable = false)
@@ -23,6 +20,24 @@ public class UserTicket {
     private String noOfPeople;
     private String seatType;
     private String seatLocation;
+
+    public UserTicket(Long id, String name, String mobile, String email, String ticketId, String movieTime, String movieTitle, String showSession, String noOfPeople, String seatType, String seatLocation) {
+        this.id = id;
+        this.name = name;
+        this.mobile = mobile;
+        this.email = email;
+        this.ticketId = ticketId;
+        this.movieTime = movieTime;
+        this.movieTitle = movieTitle;
+        this.showSession = showSession;
+        this.noOfPeople = noOfPeople;
+        this.seatType = seatType;
+        this.seatLocation = seatLocation;
+    }
+
+    public UserTicket() {
+
+    }
 
     public Long getId() {
         return id;

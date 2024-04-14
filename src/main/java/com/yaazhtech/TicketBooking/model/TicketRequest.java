@@ -10,7 +10,18 @@ public class TicketRequest {
     private String noOfPeople;
     private String seatType;
     private String seatLocation;
-
+    public TicketRequest(String name, String mobile, String email, String ticketId, String movieTime, String movieTitle, String showSession, String noOfPeople, String seatType, String seatLocation) {
+        this.name = name;
+        this.mobile = mobile;
+        this.email = email;
+        this.ticketId = ticketId;
+        this.movieTime = movieTime;
+        this.movieTitle = movieTitle;
+        this.showSession = showSession;
+        this.noOfPeople = noOfPeople;
+        this.seatType = seatType;
+        this.seatLocation = seatLocation;
+    }
 
     public String getName() {
         return name;
